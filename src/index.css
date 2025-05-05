@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-background-light/30 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .button-primary {
+    @apply glassmorphism bg-primary/20 hover:bg-primary/30 text-text font-medium px-6 py-2.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2;
+  }
+  
+  .button-secondary {
+    @apply glassmorphism bg-secondary/20 hover:bg-secondary/30 text-text font-medium px-6 py-2.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2;
+  }
+  
+  .input-primary {
+    @apply glassmorphism bg-background-light/40 text-text px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 placeholder:text-text-dark w-full;
+  }
+  
+  .message-user {
+    @apply bg-primary/20 text-text p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-sm max-w-full;
+  }
+  
+  .message-ai {
+    @apply bg-secondary/20 text-text p-3 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-sm max-w-full;
+  }
+}
